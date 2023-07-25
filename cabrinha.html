@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Animação - MariaFSCO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="icon/png" href="icon.ico">
+        <style>
+            *{
+                box-sizing: border-box;
+                margin:0;
+                padding:0;
+                cursor: url(cursor.png),auto;
+            }
+            html, body{
+                scroll-behavior: smooth;
+            }
+            body {
+                background-color: #212529;
+            }
+            h3 {
+                color: #E599F7;
+                font-family: Bebas Neue;
+                font-size: 32px;
+                font-weight: normal;
+            }
+            h2{
+                color: #F8F9FA;
+                font-family: Bebas Neue;
+                font-size: 48px;
+                font-weight: normal;
+                position: absolute;
+            }
+            h1   {
+                color: #F8F9FA;
+                font-family: Bebas Neue;
+                font-size: 64px;
+                font-weight: normal;
+            }
+
+            p    {
+                color: #F8F9FA;
+                font-family: Sora;
+                font-size: 16px;
+                font-weight: lighter;
+            }
+            .conteiner{
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 0 48px;
+            }
+            li {
+                display: inline;
+                padding:24px;
+            }
+            li:first-child{
+                margin-right: auto;
+            }
+            li a{
+                display: block;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+            }
+            li a:hover {
+                color: #E599F7;
+                font-weight: bold;
+                transition:ease-out 0.2s ;
+            }
+            .swiper-slide{
+                position: relative;
+                overflow:hidden;
+            }
+            .swiper-slide img{
+                max-height: 400px;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+             .fundotop a{
+             font-family: Bebas Neue;
+             cursor: pointer;
+             text-decoration: none;
+             font-size: 32px;
+             color: #212529;
+             }
+             .botao1:hover{
+                 background-color: #F8F9FA;
+                 color:#212529;
+                 transition: ease-out 0.4s;
+             }
+             .botao2:hover{
+                 background-color: #F8F9FA;
+                 color:#212529;
+                 transition: ease-out 0.4s;
+             }
+            .fundotop{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top:-100%;
+                transition:ease 0.6s top;
+                background-color: rgba(169,227,75,0.8);
+            }
+            .swiper-slide:hover .fundotop{
+                top:0;
+            }
+            .vermais:hover{
+                color:#F8F9FA;
+                transition: ease-out 0.3s;
+                cursor: url(cursor2.png),auto;
+            }
+            ul {
+                z-index: 5;
+                background-color:#212529;
+                padding-left: 56px;
+                padding-right: 56px;
+                align-items: center;
+                font-family: sora;
+                font-size: 16px;
+                font-weight: normal;
+                display: flex;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                list-style-type: none;
+                border-bottom: 1px solid #F8F9FA;
+            }
+            .botao1 {
+                border:none;
+                background-color: #E599F7;
+                color: #212529;
+                font-size: 16px;
+                border-radius: 50px;
+                font-family: sora;
+                font-weight: bold;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: url(cursor2.png),auto;
+            }
+            .botao1 a{
+                text-decoration: none;
+                color: #212529;
+            }
+            .botao2 {
+                border:none;
+                border-radius: 50px;
+                font-size: 16px;
+                font-weight: bold;
+                font-family: sora;
+                background-color: #A9E34B;
+                color: #212529;
+                padding: 16px 48px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 56px 36px;
+                cursor: url(cursor2.png),auto;
+            }
+            
+            .seta2:hover img{
+                cursor: url(cursor2.png),auto;
+            }
+            th{
+                width:420px;
+                text-align: left;
+                padding-top: 16px;
+                
+            }
+            td{
+                padding-top: 16px;
+            }
+            table{
+                margin-bottom: 40px;
+            }
+            .bolinha{
+                background-color: #A9E34B;
+                border-radius: 100%;
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                margin-right: 8px;
+            }
+            .bolinha2{
+                background-color: #E599F7;
+                border-radius: 100%;
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                margin-right: 8px;
+            }
+            li:hover a{
+                cursor: url(cursor2.png),auto;
+            }
+            li:hover img{
+                cursor: url(cursor2.png),auto;
+            }
+            .tag{
+                display: flex;
+                border:1px solid #E599F7;
+                border-radius: 30px;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 32px;   
+                font-family: Sora;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                text-align: center;
+                color: #E599F7;
+                margin-top: 8px;
+            }
+           
+        </style>
+    </head>        
+      <nav id="menu">
+        <ul>
+            <li>
+                <a href="index.html"> <img src="logo mafe.png"></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/mariafsco/"> <img src="linkedin.png"> </a>
+            </li>
+            <li>
+                <a href="https://www.behance.net/mariafcantbd43"> <img src="behance.png"> </a>
+            </li>
+        </ul>
+    </nav>
+
+  
+        <div id="carros" class="conteiner" style="display:flex; align-items: center;">
+            <div style="padding-top:140px; padding-left: 72px; padding-bottom: 80px; border-right:1px solid #F8F9FA; width: 85%;">
+                <div  class="seta2" id="voltar" style="margin-bottom:48px; ">
+                    <a href="index.html"><img src="seta2.png" style="width:32px; height:32px"> </a>
+                </div>
+                <div style="display:inline-block; align-items:center; ">
+                <h2> Cabrinha </h2>
+                <p class="tag" style="margin-left: 200px;">Animação - Adobe Animate</p>
+                </div>
+                <p style="padding-top:16px; padding-right: auto; margin-top:16px;">Animação criada para o curso da animadora Julia Simas.
+                </p>
+                <div>
+                    <img src="Animacao/cabrinha_damn.gif" alt="t1" style="width: 900px; margin-top: 64px; margin-bottom: 32px;" >
+                   
+                </div>
+            </div>
+            
+        </div>
+    
+    </body>
+</html>

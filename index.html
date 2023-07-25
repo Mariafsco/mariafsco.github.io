@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Maria FSCO Portifólio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+            />
+        <link rel="shortcut icon" type="icon/png" href="icon.ico">
+        <style>
+            *{
+                box-sizing: border-box;
+                margin:0;
+                padding:0;
+                cursor: url(cursor.png),auto;
+            }
+            html, body{
+                scroll-behavior: smooth;
+            }
+            body {
+                background-color: #212529;
+            }
+            h3 {
+                color: #E599F7;
+                font-family: Bebas Neue;
+                font-size: 32px;
+                font-weight: normal;
+            }
+            h2{
+                color: #F8F9FA;
+                font-family: Bebas Neue;
+                font-size: 48px;
+                font-weight: normal;
+                margin-right: 24px;
+            }
+            h1   {
+                color: #F8F9FA;
+                font-family: Bebas Neue;
+                font-size: 64px;
+                font-weight: normal;
+            }
+
+            p    {
+                color: #F8F9FA;
+                font-family: Sora;
+                font-size: 16px;
+                font-weight: lighter;
+            }
+            .conteiner{
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 0 48px;
+                display:flex; 
+                align-items: center;
+            }
+            .table{
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 0 48px;
+                align-items: center;
+            }
+            li {
+                display: inline;
+                padding:24px;
+            }
+            li:first-child{
+                margin-right: auto;
+            }
+            li a{
+                display: block;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+            }
+            li a:hover {
+                color: #E599F7;
+                font-weight: bold;
+                transition:ease-out 0.2s ;
+            }
+            .swiper-slide{
+                position: relative;
+                overflow: hidden;
+            }
+            .swiper-slide img{
+                max-height: 300px;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+             .fundotop a{
+             font-family: Bebas Neue;
+             cursor: pointer;
+             text-decoration: none;
+             font-size: 32px;
+             color: #212529;
+             }
+             .botao1:hover{
+                 background-color: #F8F9FA;
+                 color:#212529;
+                 transition: ease-out 0.4s;
+             }
+             .botao2:hover{
+                 background-color: #F8F9FA;
+                 color:#212529;
+                 transition: ease-out 0.4s;
+             }
+            .fundotop{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top:-100%;
+                transition:ease 0.6s top;
+                background-color: rgba(169,227,75,0.8);
+            }
+            .swiper-slide:hover .fundotop{
+                top:0;
+            }
+            .vermais:hover{
+                color:#F8F9FA;
+                transition: ease-out 0.3s;
+                cursor: url(cursor2.png),auto;
+            }
+            ul {
+                z-index: 5;
+                background-color:#212529;
+                padding-left: 56px;
+                padding-right: 56px;
+                align-items: center;
+                font-family: sora;
+                font-size: 16px;
+                font-weight: normal;
+                display: flex;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                list-style-type: none;
+                border-bottom: 1px solid #F8F9FA;
+            }
+            .botao1 {
+                border:none;
+                background-color: #E599F7;
+                color: #212529;
+                font-size: 16px;
+                border-radius: 50px;
+                font-family: sora;
+                font-weight: bold;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: url(cursor2.png),auto;
+            }
+            .botao1 a{
+                text-decoration: none;
+                color: #212529;
+            }
+            .botao2 {
+                border:none;
+                border-radius: 50px;
+                font-size: 16px;
+                font-weight: bold;
+                font-family: sora;
+                background-color: #A9E34B;
+                color: #212529;
+                padding: 16px 48px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 56px 36px;
+                cursor: url(cursor2.png),auto;
+            }
+            .seta {
+                padding-left: 80px;
+            }
+            .seta:hover img{
+                cursor: url(cursor2.png),auto;
+            }
+            th{
+                width:420px;
+                text-align: left;
+                padding-top: 16px;
+            }
+            td{
+                padding-top: 16px;
+            }
+            table{
+                margin-bottom: 40px;
+            }
+            .bolinha{
+                background-color: #A9E34B;
+                border-radius: 100%;
+                width: 8px;
+                height: 8px;
+                display: inline-block;
+                margin-right: 8px;
+            }
+            .bolinha2{
+                background-color: #E599F7;
+                border-radius: 100%;
+                width: 8px;
+                height: 8px;
+                display: inline-block;
+                margin-right: 8px;
+            }
+            li:hover a{
+                cursor: url(cursor2.png),auto;
+            }
+            footer:hover img,a{
+                cursor: url(cursor2.png),auto;
+            }
+            li:hover img{
+                cursor: url(cursor2.png),auto;
+            }
+            .tag{
+                display: flex;
+                border:1px solid #E599F7;
+                border-radius: 30px;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 32px;   
+                font-family: Sora;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                text-align: center;
+                color: #E599F7;
+            }
+            ::-webkit-scrollbar {
+                width: 12px;
+            }
+
+            ::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 100px rgba(27,29,32,100); 
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                -webkit-box-shadow: inset #F8F9FA 0 200px ;
+            }
+            #inicio{
+                padding-top:200px; 
+                padding-bottom: 150px; 
+                border-bottom: 1px solid #F8F9FA;
+                text-align:center;
+            }
+            #textoprincipal{
+                margin-top:16px; 
+                padding-left:200px; 
+                padding-right:200px;
+            }
+            .conteinertexto{
+                padding:72px 0; 
+                border-right:1px solid #F8F9FA; 
+                width: 75%;
+            }
+            .textoetag{
+                display:flex; 
+                align-items:center;
+                flex-wrap: wrap;
+            }
+            h3{
+                font-family: Bebas Neue; 
+                font-size: 32px; 
+                font-weight: lighter; 
+                color: #F8F9FA;
+            }
+            #sobremim{
+              padding:48px 0; 
+              width: 75%;
+            }
+            
+            @media (max-width:900px){
+                .texto1nav{
+                    display:none;
+                }
+                .logo{
+                    padding-left:0px;
+                }
+                .links{
+                    padding-right:8px;
+                }
+                #textoprincipal{
+                    padding-right:8px;
+                    padding-left:8px;
+                    text-align: center;
+                    padding-bottom: 32px;
+                }
+                #inicio{
+                padding-top:100px; 
+                padding-bottom: 80px; 
+                }
+                .conteinertexto{
+                    width: 95%;
+                }
+                .swiper-slide img{
+                min-height: 250px;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+            .tag{
+                display: flex;
+                border:1px solid #E599F7;
+                border-radius: 30px;
+                justify-content: center;
+                align-items: center;
+                padding: 8px 16px;   
+                font-family: Sora;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                text-align: center;
+                color: #E599F7;
+            }
+            }
+            @media (max-width:820px){
+                .tag{
+                    display:block;
+                }
+                .conteiner{
+                    padding: 0 24px;
+                }
+                .seta{
+                    padding-left:16px;
+                }
+                #sobremim{
+                 padding:48px 0; 
+                 width: 95%;
+                }
+                .table{
+                padding: 0 16px;
+            }
+            }
+        </style>
+    </head>
+    <nav id="menu">
+        <ul>
+            <li class="logo">
+                <a href="#inicio"><img src="logo mafe.png"></a>
+            </li>
+            <li class="texto1nav">
+                <a href="#secao1"> Ilustração </a>
+            </li>
+            <li class="texto1nav">
+                <a href="#secao2"> UI Design </a>
+            </li>
+            <li class="texto1nav">
+                <a href="#secao3"> Branding </a>
+            </li>
+            <li class="texto1nav">
+                <a href="#secao4"> Design de produto </a>
+            </li>
+            <li class="texto1nav">
+                <a href="#secao5"> Animação 2D </a>
+            </li>
+            <li class="links">
+                <a href="https://www.linkedin.com/in/mariafsco/"> <img src="linkedin.png"> </a>
+            </li>
+            <li class="links">
+                <a href="https://www.behance.net/mariafcantbd43"> <img src="behance.png"> </a>
+            </li>
+        </ul>
+    </nav>
+    <body>
+        <div id="inicio">
+            <div>
+                <h3 style="margin-bottom:0px;">Bem-vindo ao meu portfólio</h3>
+                <h1 style="margin-top:8px; margin-bottom:0px;">MARIA FERNANDA CANTUARIA</h1>
+                <p id="textoprincipal">Olá! Aqui você vai encontrar alguns dos meus principais projetos de design e ilustração. Sinta-se a vontade de entrar em contato comigo pelo e-mail, me seguir nas minhas redes profissionais e saber um pouco mais sobre as minhas experiências!
+                </p>
+                <div id="botaos">
+                    <a href="#secao6"><button class="botao1">Sobre mim</button></a>
+                    <a href="mariafcantuaria@gmail.com">
+                    <button class="botao2">Entrar em contato</button>
+                    </a>
+                    
+                </div>
+            </div> 
+        </div>
+        <div id="secao1">
+        <div id="carros" class="conteiner">
+            <div class="conteinertexto">
+                <div class="textoetag">
+                <h2> Ilustração </h2>
+                <p class="tag" >Adobe photoshop, Adobe Illustrator</p>
+                </div>
+                <p style="padding-top:16px; padding-right: auto; margin-top:16px;">Projetos de ilustração digital feitos no Adobe Photoshop e Illustrator. <br> Clique na seta ou 
+                    arraste as imagens para ver mais!
+                </p>
+            </div>
+            <div class="seta" id="seta1">
+                <img src="seta.png">
+            </div>
+        </div>
+
+        <div class="swiper" id="s1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Ilustração/img1.png" alt="Foto 01">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/170796955/Twin-souls-Illustration" class="vermais">Abrir no Behance</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Ilustração/img2.png" alt="Foto 02">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/171044301/Um-mundo-de-bruxinhas-Ilustracao" class="vermais">Abrir no Behance</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Ilustração/img3.png" alt="Foto 03">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/162581335/BUGS-Ilustracoes"class="vermais">Abrir no Behance </a>
+                    </div>
+                </div>   
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Ilustração/img4.png" alt="Foto 04">
+                    </div>
+                    <div class="fundotop">
+                        <a href="newhtml.html" class="vermais">Ver mais</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Ilustração/img5.png" alt="Foto 05">
+                    </div>
+                    <div class="fundotop">
+                        <a href="coraline.html"class="vermais" >Ver mais </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Ilustração/img6.png" alt="Foto 06">
+                    </div>
+                    <div class="fundotop">
+                        <a href="diabinha.html"class="vermais" >Ver mais </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Ilustração/img7.png" alt="Foto 07">
+                    </div>
+                    <div class="fundotop">
+                        <a href="retrato.html"class="vermais" >Ver mais </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Ilustração/img8.png" alt="Foto 08">
+                    </div>
+                    <div class="fundotop">
+                        <a href="chiriro.html"class="vermais" >Ver mais </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Ilustração/img9.png" alt="Foto 09">
+                    </div>
+                    <div class="fundotop">
+                        <a href="samurai.html"class="vermais" >Ver mais </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Ilustração/img10.png" alt="Foto 10">
+                    </div>
+                    <div class="fundotop">
+                        <a href="me conta ilustra.html"class="vermais" >Ver mais </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="secao2">
+        <div id="carros" class="conteiner">
+            <div class="conteinertexto">
+                <div class="textoetag">
+                <h2> UI Design </h2>
+                <p class="tag">Figma</p>
+                </div>
+                <p style="padding-top:16px; padding-right: auto; margin-top:16px;">Projetos de UI Design feitos no Figma. <br> Clique na seta ou 
+                    arraste as imagens para ver mais!
+                </p>
+            </div>
+            <div class="seta" id="seta2">
+                <img src="seta.png">
+            </div>
+        </div>
+
+        <div class="swiper" id="s2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="ui/img1.png" alt="Foto 01">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/161875849/Site-institucional-Treinador-de-futebol-UI-DESIG" class="vermais">Abrir no Behance </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="ui/img2.png" alt="Foto 02">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/141520907/Landing-Page-Design-Health-Insurance" class="vermais">Abrir no Behance</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="ui/img3.png" alt="Foto 03">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/149201435/UI-Design-Website-Marketing-Agency-Steigen-Marketing"class="vermais">Abrir no Behance</a>
+                    </div>
+                </div>   
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="ui/img4.png" alt="Foto 04">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/150964747/Onepage-Website-UIUX-Design-Citrus" class="vermais">Abrir no Behance</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="ui/img5.png" alt="Foto 05">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/161875717/Design-agency-UI-Design"class="vermais" >Abrir no Behance</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="ui/img6.png" alt="Foto 06">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/161877325/Onepage-Key-visual-UI-Design"class="vermais" >Abrir no Behance</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="ui/img7.png" alt="Foto 07">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/161876499/Templates-CAPS-Media"class="vermais" >Abrir no Behance</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="ui/img8.png" alt="Foto 08">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/136090465/Dashboard-Study-UIUX"class="vermais" >Abrir no Behance</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        <div id="secao3">
+        <div id="carros" class="conteiner">
+            <div class="conteinertexto">
+                <div class="textoetag">
+                <h2> Branding </h2>
+                <p class="tag">Adobe Illustrator, Adobe Photoshop</p>
+                </div>
+                <p style="padding-top:16px; padding-right: auto; margin-top:16px;">Projetos de Branding feitos no Adobe Photoshop e Illustrator. <br> Clique na seta ou 
+                    arraste as imagens para ver mais!
+                </p>
+            </div>
+            <div class="seta" id="seta3">
+                <img src="seta.png">
+            </div>
+        </div>
+
+        <div class="swiper" id="s3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Brand/img1.png" alt="Foto 01">
+                    </div>
+                    <div class="fundotop">
+                        <a href="salutar.html" class="vermais">Ver mais </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Brand/img5.png" alt="Foto 02">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/175718663/BUGZ-Branding" class="vermais">Abrir no Behance </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Brand/img3.png" alt="Foto 03">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/113120829/HYPNO-Clothings"class="vermais">Abrir no Behance</a>
+                    </div>
+                </div>   
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Brand/img4.png" alt="Foto 04">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/161876123/ME-CONTA-Jogo-de-encaixe" class="vermais">Abrir no Behance</a>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+        </div>
+         <div id="secao4">
+        <div id="carros" class="conteiner" >
+            <div class="conteinertexto">
+                <div class="textoetag">
+                <h2> Design de produto </h2>
+                <p class="tag">AutoCad, SketchUp, Adobe Illustrator</p>
+                </div>
+                <p style="padding-top:16px; padding-right: auto; margin-top:16px;">Projetos de Design de produtos feitos no AutoCad e SketchUp. <br> Clique na seta ou 
+                    arraste as imagens para ver mais!
+                </p>
+            </div>
+            <div class="seta" id="seta4">
+                <img src="seta.png">
+            </div>
+        </div>
+
+        <div class="swiper" id="s4">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Produto/img6.png" alt="Foto 01">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/176007019/Estacao-de-costura-Projeto-de-produto" class="vermais">Abrir no Behance </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Produto/img3.png" alt="Foto 03">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/161876123/ME-CONTA-Jogo-de-encaixe"class="vermais">Abrir no Behance</a>
+                    </div>
+                </div>   
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Produto/img4.png" alt="Foto 04">
+                    </div>
+                    <div class="fundotop">
+                        <a href="brdamafe.html" class="vermais">Ver mais </a>
+                    </div>
+                </div>
+               
+            </div>
+
+        </div>
+        </div>
+         <div id="secao5">
+        <div id="carros" class="conteiner">
+           <div class="conteinertexto">
+                <div class="textoetag">
+                <h2> Animação 2D </h2>
+                <p class="tag">Adobe Animate, Figma</p>
+                </div>
+                <p style="padding-top:16px; padding-right: auto; margin-top:16px;">Projetos de animação feitos no Adobe animate. <br> Clique na seta ou 
+                    arraste as imagens para ver mais!
+                </p>
+            </div>
+            <div class="seta" id="seta5">
+                <img src="seta.png">
+            </div>
+        </div>
+
+        <div class="swiper" id="s5">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Animacao/img1.png" alt="Foto 01">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/113118537/PelasMaos" class="vermais">Abrir no Behance</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Animacao/img2.png" alt="Foto 02">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/113120829/HYPNO-Clothings" class="vermais">Abrir no Behance</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Animacao/img3.png" alt="Foto 03">
+                    </div>
+                    <div class="fundotop">
+                        <a href="cabrinha.html"class="vermais">Ver mais </a>
+                    </div>
+                </div>   
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="Animacao/img4.png" alt="Foto 04">
+                    </div>
+                    <div class="fundotop">
+                        <a href="https://www.behance.net/gallery/113120829/HYPNO-Clothings" class="vermais">Abrir no Behance</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        <div id="secao6" class="conteiner" style="display:flex; align-items: center;">
+            <div id="sobremim" >
+                <h2 > Sobre mim </h2>
+                <p style="margin-top:24px; padding-right: auto;">Meu nome é Maria Fernanda e atualmente estou cursando Desenho Industrial com especialização em Projeto de Produtos. Minha trajetória inclui experiência como UI Designer, o que me proporcionou uma grande afinidade com produtos digitais. No entanto, estou em constante aperfeiçoamento na criação de produtos físicos.
+
+                    <br><br>Além de designer, também me dedico à criação de ilustrações digitais e possuo habilidades artísticas versáteis. Minha jornada incluiu aventuras na área de animação e exploração de artes tradicionais, como maquetes, cerâmicas, pinturas e estamparias. Essa diversidade de experiências me torna uma profissional com uma visão ampla e criativa.
+
+                    <br><br>Estou sempre buscando novas formas de expressar minha paixão pelo design e a arte, e sinto-me animada em enfrentar novos desafios e oportunidades que me permitam crescer e contribuir ainda mais nesse campo.
+                </p>
+            </div>
+        </div>
+        <div class="table">
+            <h3>Habilidades</h3>
+        <table id="secao7" >
+                <tr style="font-family: sora; font-size: 16px; color: #F8F9FA; font-weight: bold; ">
+                    <th>Design geral</th>
+                    <th>Design de produtos</th>
+                    <th>Programação WEB</th>
+                <tr style="font-family: sora; font-size: 16px; color: #F8F9FA; font-weight: lighter; ">
+                    <td><div class="bolinha"></div>Adobe Photoshop</td>
+                  <td><div class="bolinha"></div>AutoCad</td>
+                  <td><div class="bolinha"></div>HTML5</td>
+                </tr>
+                <tr style="font-family: sora; font-size: 16px; color: #F8F9FA; font-weight: lighter">
+                  <td><div class="bolinha"></div>Adobe Illustrator</td>
+                  <td><div class="bolinha"></div>SolidWorks</td>
+                  <td><div class="bolinha"></div>CSS</td>
+                </tr>
+                <tr style="font-family: sora; font-size: 16px; color: #F8F9FA; font-weight: lighter">
+                  <td><div class="bolinha"></div>Figma</td>
+                  <td><div class="bolinha"></div>SketchUp</td>
+                  <td><div class="bolinha"></div>Javascript</td>
+                </tr>
+            </table>
+        </div>
+        <div class="conteiner" style="border-bottom: 1px solid #F8F9FA; margin-bottom:36px;" >
+            <table id="secao8" >
+                <tr style="font-family: sora; font-size: 16px; color: #F8F9FA; font-weight: bold; ">
+                    <th>Outros</th>
+                <tr style="font-family: sora; font-size: 16px; color: #F8F9FA; font-weight: lighter; ">
+                    <td><div class="bolinha2"></div>Adobe Animate</td>
+                </tr>
+                <tr style="font-family: sora; font-size: 16px; color: #F8F9FA; font-weight: lighter">
+                  <td><div class="bolinha2"></div>Estamparia artesanal (Serigrafia)</td>
+                </tr>
+                <tr style="font-family: sora; font-size: 16px; color: #F8F9FA; font-weight: lighter">
+                  <td><div class="bolinha2"></div>Desenho e pintura tradicionais</td>
+                </tr>
+            </table>
+        </div>
+        <div class="table" >
+            <h3>Escolaridade</h3>
+        <table id="secao9">
+                <tr style="font-family: sora; font-size: 16px; color: #F8F9FA; font-weight: bold; ">
+                    <th>Nível Técnico</th>
+                    <th>Ensino Superior</th>
+                    
+                <tr style="font-family: sora; font-size: 16px; color: #F8F9FA; font-weight: lighter; ">
+                    <td>IFRJ - Instituto Federal do Rio de Janeiro <p> Campus Arraial do Cabo</p></td>
+                    <td>UFF - Universidade Federal Fluminense <p> Campus praia Vermelha - Niterói </p></td>
+                </tr>
+                <tr style="font-family: sora; font-size: 16px; color: #F8F9FA; font-weight: lighter">
+                  <td><div class="bolinha"></div>Informática</td>
+                  <td><div class="bolinha"></div>Desenho industrial</td>
+                </tr>
+                
+            </table>
+        </div>
+        <footer> 
+                <div class="conteiner" id="footer" style="background-color: #F8F9FA; padding-top:32px; padding-bottom:32px;"> 
+                        <a href="#secao1"> <img src="logo mafe2.png" ></a>
+                        <div style="margin-left:auto;">
+                        <a href="https://www.linkedin.com/in/mariafsco/"> <img src="linkedin.png" style="margin-right: 16px; " ></a>
+                        <a href="https://www.behance.net/mariafcantbd43"> <img src="behance.png"style="margin-right: 16px; "></a>
+                        </div>
+                    
+                </div>  
+            </footer>
+               
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script>
+             new Swiper("#s1", {
+                loop: true,
+                slidesPerView: 3,
+                navigation: {
+                    nextEl: "#seta1"
+                },
+                keyboard: true
+            });
+            new Swiper("#s2", {
+                loop: true,
+                slidesPerView: 3,
+                navigation: {
+                    nextEl: "#seta2"
+                },
+                keyboard: true
+            });
+            new Swiper("#s3", {
+                loop: true,
+                slidesPerView: 3,
+                navigation: {
+                    nextEl: "#seta3"
+                },
+                keyboard: true
+            });
+            new Swiper("#s4", {
+                loop: true,
+                slidesPerView: 3,
+                navigation: {
+                    nextEl: "#seta4"
+                },
+                keyboard: true
+            });
+            new Swiper("#s5", {
+                loop: true,
+                slidesPerView: 3,
+                navigation: {
+                    nextEl: "#seta5"
+                },
+                keyboard: true
+            });
+        </script>
+    </body>
+</html>
